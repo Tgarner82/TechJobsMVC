@@ -29,7 +29,7 @@ namespace TechJobs.Controllers
             }
             else
             {
-                List<Dictionary<string, string>> jobs = JobData.FindByColumnAndValue(searchType, searchTerm);
+                List<Dictionary<string, string>> jobs = JobData.FindByValue(searchTerm);
                 ViewBag.jobs = jobs;
                 return View("Views/Search/Index.cshtml");
             }
